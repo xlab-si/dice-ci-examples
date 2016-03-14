@@ -26,6 +26,6 @@ NUMBER=$(( $BUILD_NUMBER % 10 ))
 LATENCY=$( bc <<< "base = 2; ${LATENCY_BASE[$NUMBER]} + 2*(16383 - $RANDOM)/16383" )
 THROUGHPUT=$( bc <<< "base = 2; ${THROUGHPUT_BASE[$NUMBER]} + (16383 - $RANDOM)/16383" )
 
-echo -n "{ 'build_number': $BUILD_NUMBER, " > $OUTPUT
-echo -n "'latency': ${LATENCY}, " >> $OUTPUT
-echo "'throughput': ${THROUGHPUT} }" >> $OUTPUT
+echo -n "{ \"build_number\": $BUILD_NUMBER, " > $OUTPUT
+echo -n "\"latency\": ${LATENCY}, " >> $OUTPUT
+echo "\"throughput\": ${THROUGHPUT} }" >> $OUTPUT

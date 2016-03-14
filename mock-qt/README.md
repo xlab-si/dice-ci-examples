@@ -18,5 +18,5 @@ The result of ```job.sh``` is a JSON file in the ```outputs``` subdir,
 e.g.:
 
 ```json
-{ 'build_number': 30, 'latency': 3, 'throughput': 2 }
+{ "build_number": 30, "latency": 3, "throughput": 2 }
 ```
